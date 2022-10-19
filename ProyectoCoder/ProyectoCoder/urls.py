@@ -16,16 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from AppCoder.views import saludo
-from AppCoder.views import saludar_a
-from AppCoder.views import saludarlos
-from AppCoder.views import fecha_cumple
-from AppCoder.views import mostrar_mi_template
+from AppCoder.views import mostrar_familiares 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('AppCoder/saludo', saludo),
-    path('AppCoder/saludar_a/<nombre>', saludar_a),
-    path('messi/<nombre>', saludarlos),
-    path('suarez/<edad>', fecha_cumple),
-    path('boca', mostrar_mi_template)
+    path('AppCoder/mostrar_familiares', mostrar_familiares)
 ]
